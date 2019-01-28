@@ -18,7 +18,7 @@ class DiskPlugin(BasePlugin):
             if self.test_mode:
                 from conf.settings import BASEDIR
 
-                output = self.shell_cmd("ipconfig")
+                output = open(os.path.join(BASEDIR, 'files/disk.out'), 'r').read()
                 return output
         except Exception as e:
             pass
