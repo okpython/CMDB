@@ -16,6 +16,7 @@ class DiskPlugin(BasePlugin):
         try:
             # 如果是测试模式的话，就读取我们事先写好在文件中的数据
             if self.test_mode:
+                from conf.settings import BASEDIR
 
                 output = self.shell_cmd("ipconfig")
                 return output
