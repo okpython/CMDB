@@ -3,6 +3,7 @@ from conf import settings
 class BasePlugin(object):
 
     def __init__(self):
+        self.test_mode = settings.TEST_MODE
         self.mode_list = ["SSH", "Salt", "Agent"]
         if settings.MODE in self.mode_list:
             self.mode = settings.MODE
